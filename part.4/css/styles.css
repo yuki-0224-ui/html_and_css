@@ -1,0 +1,15 @@
+p {
+    color: red;
+}
+
+#interesting {
+    color: yellow;
+}
+
+.difficult {
+    color: blue;
+}
+
+a[target="blanl"] {
+    color: orange;
+}
