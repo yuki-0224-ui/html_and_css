@@ -1,0 +1,88 @@
+header {
+    background-color: #D9D9D9;
+    width: 1980px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 5px 0px 0px 200px;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    
+}
+
+.notice p {
+    font-weight: bold;
+}
+
+.info {
+    display: flex;
+    gap: 40px;
+    justify-content: right;
+    align-items: flex-start;
+    position: absolute;
+    top: 15px;
+    left: 1500px;
+}
+
+.notice {
+    box-sizing: border-box;
+    width: 1080px;
+    padding: 30px 0px 30px 25px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border: medium solid #D9D9D9;
+    border-radius: 10px;
+    
+}
+
+main {
+    display: flex;
+    margin: 0 auto;
+    width: 1080px;
+    height: 800px;
+    justify-content: space-between;
+}
+
+.main-box {
+    display: flex;
+    flex-wrap: wrap;
+    border: medium solid #D9D9D9;
+    border-radius: 10px;
+    width: 60%;
+    height: 60vh;
+    gap: 20px; 
+    justify-content: center;
+    align-items: center;
+}
+
+.content-box:nth-child(-n+3) {
+    margin-top: 50px;
+}
+
+.content-box:nth-child(n+7) {
+    opacity: 0;
+}
+
+.content-box {
+    width: 30%;
+    height: 19vh;
+    border: thin solid #D9D9D9;
+}
+
+.timeline {
+    border: medium solid #D9D9D9;
+    border-radius: 10px;
+    width: 20%;
+    height: 60vh;
+}
+
+.timeline h3 {
+    font-size: 20px;
+    padding-left: 10px;
+}
