@@ -1,0 +1,174 @@
+/*スマートフォン及び共通設定*/
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 2fr 1fr 10fr 5fr;
+  gap: 10px;
+}
+
+header {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h2 {
+  margin-left: 20px;
+}
+
+nav {
+  margin: 10px 20px 0 0;
+}
+
+nav p {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.notice {
+  grid-column: 1 / 4;
+  grid-row: 2;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.notice .notice_title {
+  font-size: 20px;
+  margin: 10px 0 10px 10px;
+}
+
+main {
+  grid-column: 1 / 4;
+  grid-row: 3;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 0 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+main .content {
+  border: 1px solid #000;
+  margin: 10px;
+  aspect-ratio: 1;
+}
+
+.timeline {
+  grid-column: 1 /4;
+  grid-row: 4;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+
+.timeline .timeline_title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.timeline .month {
+  display: flex;
+}
+.timeline .month li {
+  margin-left: 25px;
+  margin: 0 auto;
+}
+
+/*iPad用の設定*/
+@media screen and (min-width: 600px) {
+  .container {
+    grid-template-columns: 1fr 6fr 0.5fr 2fr 1fr;
+    grid-template-rows: 1.2fr 1fr 5fr;
+    gap: 20px;
+  }
+
+  header {
+    grid-column: 1 /6;
+    grid-row: 1;
+  }
+
+  header h2 {
+    font-size: 30px;
+  }
+
+  .notice {
+    grid-column: 2 / 5;
+    grid-row: 2;
+    text-align: left;
+  }
+
+  .notice .notice_title {
+    font-size: 20px;
+    margin: 30px 0 30px 25px;
+  }
+
+  main {
+    grid-column: 2;
+    grid-row: 3;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .timeline {
+    grid-column: 4;
+    grid-row: 3;
+  }
+
+  .timeline .timeline_title {
+    font-size: 15px;
+  }
+
+  .timeline .month {
+    display: inherit;
+  }
+}
+
+/*PC用の設定*/
+@media screen and (min-width: 835px) {
+  .container {
+    grid-template-columns: 1fr 6fr 0.2fr 2fr 1fr;
+    grid-template-rows: 1.5fr 0.5fr 10fr;
+    gap: 20px;
+  }
+
+  header h2 {
+    margin-left: 200px;
+    font-size: 40px;
+  }
+
+  nav {
+    margin: 10px 120px 0 0;
+  }
+
+  nav p {
+    font-size: 20px;
+    margin-left: 15px;
+  }
+
+  .notice .notice_title {
+    font-size: 25px;
+    margin: 30px 0 30px 25px;
+  }
+
+  main {
+    padding: 50px 30px 0 30px;
+    gap: 30px;
+  }
+
+  main .content {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .timeline .timeline_title {
+    font-size: 25px;
+    text-align: left;
+    margin-left: 15px;
+  }
+}
